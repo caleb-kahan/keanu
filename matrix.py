@@ -12,19 +12,36 @@ import math
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
-    pass
+    for i in range(len(matrix)):
+        for j in range(len(matrix[0])):
+            print(str(matrix[i][j])+" ")
+        print("\n")
 
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
 def ident( matrix ):
-    pass
+    for i in range(len(matrix)):
+        matrix[i][i] = 1
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-    pass
+    #Condiitons to multiply
+    if len(m1) != len(m2[0]):
+        return;
+    m2Clone = copy.deepcopy(m2)
+    for rowM1 in range(len(m1[0])):
+        list = []
+        for colM1 in range(len(m1)):
+            list.append(m1[colM1][rowM1])
+        for colM2 in range(len(m2Clone)):
+            m2[colM2][rowM1]  = list_mult(m2Clone[colM2],list)
 
-
+def list_mult(l1,l2):
+    sum = 0
+    for i in range(len(l1)):
+        sum+=(l1*l2)
+    return sum
 
 
 def new_matrix(rows = 4, cols = 4):
