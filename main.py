@@ -4,11 +4,20 @@ from matrix import *
 
 screen = new_screen()
 color = [ 0, 255, 0 ]
-matrix = []
-#Testing add_edge
-add_edge(matrix,0,4.96,1.234,-4.214,-2.498,0.693)
-#Testing print_matrix
-print_matrix(matrix)
+m2 = []
+print("Testing add_edge and print_matrix")
+print("adding one edge")
+add_edge(m2,0,4.96,1.234,-4.214,-2.498,0.693)
+print_matrix(m2)
+print("adding another edge")
+add_edge(m2,0,4.96,66,4.214,-2.498,88)
+print_matrix(m2)
 
-draw_lines( matrix, screen, color )
-display(screen)
+print("testing indent")
+ident(m2)
+print_matrix(m2)
+
+
+
+#draw_lines( m2, screen, color )
+#display(screen)
