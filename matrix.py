@@ -21,7 +21,7 @@ def print_matrix( matrix ):
 #you may assume matrix is square
 def ident( matrix ):
     for i in range(len(matrix)):
-        matrix[i][i] = 1
+        matrix[i][i] = 1.0
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
