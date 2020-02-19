@@ -8,13 +8,14 @@ z0  z1  ... zn
 1  1        1
 """
 import math
+import copy
 
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
     for row in range(len(matrix[0])):
         for col in range(len(matrix)):
-            print("{0:.3f}".format(matrix[col][row]) + " "),
+            print("{0:6.3f}".format(matrix[col][row]) + " "),
         print("")
 
 #turn the paramter matrix into an identity matrix
@@ -43,7 +44,7 @@ def matrix_mult( m1, m2 ):
 def list_mult(l1,l2):
     sum = 0
     for i in range(len(l1)):
-        sum+=(l1*l2)
+        sum+=(l1[i]*l2[i])
     return sum
 
 
