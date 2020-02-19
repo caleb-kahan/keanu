@@ -6,18 +6,17 @@ def draw_lines( matrix, screen, color ):
     for col in range(0,len(matrix),2):
         if col+1==len(matrix):
             continue
-        draw_line(matrix[col][0],matrix[col][1],matrix[col+1][0],matrix[col+1][1],screen,color)
+        draw_line(int(round(matrix[col][0])),int(round(matrix[col][1])),int(round(matrix[col+1][0])),int(round(matrix[col+1][1])),screen,color)
 
 
 def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
-    matrix.append([x0,y0,z0,1.0])
-    matrix.append([x1,y1,z1,1.0])
+    matrix.append([1.0*x0,1.0*y0,1.0*z0,1.0])
+    matrix.append([1.0*x1,1.0*y1,1.0*z1,1.0])
 
 def add_point( matrix, x, y, z=0 ):
-    matrix.append([x,y,z,1.0])
+    matrix.append([1.0*x,1.0*y,1.0*z,1.0])
 
 def draw_line( x0, y0, x1, y1, screen, color ):
-
     #swap points if going right -> left
     if x0 > x1:
         xt = x0

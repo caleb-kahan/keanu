@@ -12,10 +12,10 @@ import math
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
-    for i in range(len(matrix)):
-        for j in range(len(matrix[0])):
-            print(str(matrix[i][j])+" ")
-        print("\n")
+    for row in range(len(matrix[0])):
+        for col in range(len(matrix)):
+            print("{0:.3f}".format(matrix[col][row]) + " "),
+        print("")
 
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
