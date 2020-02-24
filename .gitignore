@@ -37,6 +37,8 @@
 *.hex
 
 *.ftpconfig
+*.ppm
+*.png
 
 # Debug files
 *.dSYM/
