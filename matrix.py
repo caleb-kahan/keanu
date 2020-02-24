@@ -40,13 +40,19 @@ def matrix_mult( m1, m2 ):
             list.append(m1[colM1][rowM1])
         for colM2 in range(len(m2Clone)):
             m2[colM2][rowM1]  = list_mult(m2Clone[colM2],list)
-
+def matrix_add(bigMatrix,smallMatrix):
+    for i in range(len(smallMatrix)):
+        bigMatrix.append(smallMatrix[i][:])
 def list_mult(l1,l2):
     sum = 0
     for i in range(len(l1)):
         sum+=(l1[i]*l2[i])
     return sum
 
+def translate_matrix(matrix,xTrans,yTrans):
+    for i in range(len(matrix)):
+        matrix[i][0]+=xTrans
+        matrix[i][1]+=yTrans
 
 def new_matrix(rows = 4, cols = 4):
     m = []

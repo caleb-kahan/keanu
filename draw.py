@@ -15,7 +15,6 @@ def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
 
 def add_point( matrix, x, y, z=0 ):
     matrix.append([1.0*x,1.0*y,1.0*z,1.0])
-
 def draw_line( x0, y0, x1, y1, screen, color ):
     #swap points if going right -> left
     if x0 > x1:
